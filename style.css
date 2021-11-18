@@ -79,7 +79,7 @@ nav.nav-transparent a, nav.hide-nav a{
 .navbar .navbar-nav .nav-item .nav-link:hover {
     border-bottom: 2px solid #00438b;
 }
-section#about, #home, #course, #timeline, #volunteer{
+section{
     padding-top: 6rem;
 }
 .jumbotron{
@@ -88,21 +88,26 @@ section#about, #home, #course, #timeline, #volunteer{
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
-.text-container, .register-btn{
+.text-container{
     width: 80%;
     height: fit-content;
     margin: auto;
     transform: scale(1.1);
     text-align: center;
+} 
+.register-btn {
+    width: 100%;
+    height: fit-content;
+    margin: auto;
+    text-align: center;
 }
 .text-container h1.judul{
-    font-size: 3.5rem;
+    font-size: 1.5rem;
     font-family: "Metropolis Bold";
 }
 .text-container h1.sub-judul{
-    font-size: 2rem;
-    margin-top: -18px;
-    font-family: 'Metropolis Thin';
+    font-size: 3.5rem;
+    font-family: 'Metropolis Bold';
 }
 .text-container p{
     font-family: 'Quicksand', sans-serif;
@@ -110,13 +115,12 @@ section#about, #home, #course, #timeline, #volunteer{
 }
 .register-btn{
     font-family: 'Quicksand', sans-serif;
-    width: 20%;
-    margin-top: 30px;
+    width: 120px;
     border-radius: 2em;
+    margin: 1em auto;
     border: 0;
     background-color:#cc4f53;
     border: 1px solid transparent;
-    transform: scale(1.14);
 }
 .register-btn:hover{
     color: #cc4f53;
@@ -139,19 +143,44 @@ section#about, #home, #course, #timeline, #volunteer{
     font-style: italic;
     font-size: larger;
 }
-#timeline, #volunteer, footer {
+#timeline, #volunteer, #chart, #team {
     background-color: #D2E7FE;
 }
-#course .card{
+#course .card,#team .card{
     transition: 0.2s;
     border-radius: 1.2rem;
     background-color: transparent;
     border: transparent;
 }
-#course .card img{
+#testimoni .card{
+    transition: 0.2s;
+    border-radius: 1.2rem;
+    background-color: transparent;
+}
+/* Margin Slick Slider */
+#testimoni .slick-slide {
+	margin: 15px 15px;
+}
+#testimoni .slick-list {
+	margin: 15px -15px;
+}
+#course .course-saintek .slick-slide {
+	margin: 15px 15px;
+}
+#course .course-saintek .slick-list {
+	margin: 15px -15px;
+}
+#course .slick-slide {
+	margin: 15px 10px;
+}
+#course .slick-list {
+	margin: 15px -10px;
+}
+/* image slick slider */
+#course .card img, #testimoni .card img, #team .card img{
     padding:10px;
 }
-#course .card .card-body p{
+#course .card .card-body p, #testimoni .card .card-body p, #team .card .card-body p{
     top: -10px;
     font-weight: 500;
     font-family: 'Quicksand', sans-serif;
@@ -159,6 +188,36 @@ section#about, #home, #course, #timeline, #volunteer{
 #course h3, h3.saintek{
     width: max-content;
     margin: 20px;
+}
+.img-testi{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+.img-testi a{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    margin-left: 15px;
+}
+.img-testi a p{
+    width: 100%;
+    color: black;
+    position: relative;
+    top: 1.3em;
+    right: 2em;
+}
+.img-testi img{
+    width: 4em;
+    display: flex;
+    align-items: flex-start;
+}
+.isi-testi{
+    width: 100%;
+    padding: 0 30px;
+    margin:0 auto;
+    text-align: left;
 }
 .card:hover{
     margin-top: -5px;
@@ -176,6 +235,18 @@ section#about, #home, #course, #timeline, #volunteer{
 .grid .text-container p{
     margin-top: 4rem;
     font-family: 'Quicksand', sans-serif;
+}
+.chart_wrap {
+    position: relative;
+    padding-bottom: 35%;
+    height: 0;
+    overflow:hidden;
+}
+.piechart {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
 }
 footer{
     padding-top: 2rem;
@@ -202,7 +273,7 @@ footer .right-side{
     height: inherit;
 }
 footer .right-side img{
-    transform: scale(0.7);
+    transform: scale(0.5);
 }
 footer .container .left-side{
     width: 100%;
@@ -349,16 +420,15 @@ footer .container .left-side .contact-us a img:hover{
 
 
 
-
-
-
 /* Responsive */
 @media screen and (min-width: 320px) and (max-width:384px) {
     body {
-        background-size: 200vmax;
-        background-position-y: 80px;
+        background-size: 130vmax;
+        background-position-y:-90px;
+        overflow-x:hidden;
     }
     nav.nav-transparent{
+        width: 100%;
         background-color: white;
     }
     .jumbotron{
@@ -374,6 +444,11 @@ footer .container .left-side .contact-us a img:hover{
         display: flex;
         flex-direction: column;
         text-align: center;
+    }
+    .course-saintek .container-card, .course-soshum .container-card, .course-ekstra .container-card, .testi-container .container-card, .team-container .container-card{
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
     }
     .jumbotron .img-container img.img{
         position: static;
@@ -393,15 +468,22 @@ footer .container .left-side .contact-us a img:hover{
         left: -10px;
         z-index: -1;
     }
-    .jumbotron .register-btn, #join .register-btn{
-        width: 40%;
-        margin-top: 0px;
+    .jumbotron .register-btn{
+        width: 100px;
+        font-size: .8em;
+        margin: 0 auto;
         border-radius: 2em;
         border: 0;
         border: 1px solid transparent;
         background-color: #cc4f53;
-        transform: scale(0.9);
-        align-items: center;
+    }
+    .chart_wrap {
+        transform: scale(.8);
+        position: relative;
+        top: -40px;
+        padding-bottom: 120%;
+        height: 0;
+        overflow:hidden;
     }
     footer .container{
         width: 100%;
@@ -416,14 +498,15 @@ footer .container .left-side .contact-us a img:hover{
         text-align: center;
     }
     footer .container .left-side .contact-us ul{
-        margin-left: -30px;
+        position: relative;
+        left: -50px;
         white-space: nowrap;
     }
 } 
 @media screen and (min-width: 384px) and (max-width:666px) {
     body {
-        background-size: 200vmax;
-        background-position-y: -40px;
+        background-size: 150vmax;
+        background-position-y:-155px;
     }
     nav.nav-transparent{
         background-color: white;
@@ -461,14 +544,21 @@ footer .container .left-side .contact-us a img:hover{
         z-index: -1;
     }
     .jumbotron .register-btn{
-        width: 40%;
+        width: 100%;
         margin-top: 0px;
         border-radius: 2em;
         border: 0;
-        background-color: #cc4f53;
         border: 1px solid transparent;
-        transform: scale(0.9);
+        background-color: #cc4f53;
         align-items: center;
+    }
+    .chart_wrap {
+        transform: scale(.8);
+        position: relative;
+        top: -40px;
+        padding-bottom: 120%;
+        height: 0;
+        overflow:hidden;
     }
     footer .container{
         width: 100%;
@@ -525,14 +615,19 @@ footer .container .left-side .contact-us a img:hover{
         z-index: -1;
     }
     .jumbotron .register-btn{
-        width: 40%;
+        width: 100%;
         margin-top: 0px;
         border-radius: 2em;
         border: 0;
         border: 1px solid transparent;
         background-color: #cc4f53;
-        transform: scale(0.9);
         align-items: center;
+    }
+    .chart_wrap {
+        position: relative;
+        padding-bottom: 50%;
+        height: 0;
+        overflow:hidden;
     }
     footer .container{
         width: 100%;
@@ -579,14 +674,19 @@ footer .container .left-side .contact-us a img:hover{
         z-index: -1;
     }
     .jumbotron .register-btn{
-        width: 40%;
+        width: 100%;
         margin-top: 0px;
         border-radius: 2em;
         border: 0;
         border: 1px solid transparent;
         background-color: #cc4f53;
-        transform: scale(0.9);
         align-items: center;
+    }
+    .chart_wrap {
+        position: relative;
+        padding-bottom: 50%;
+        height: 0;
+        overflow:hidden;
     }
     footer .container{
         width: 100%;
