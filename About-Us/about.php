@@ -1,3 +1,33 @@
+<?php  
+    $dataAdminInti = [
+        [
+            "foto" => "chel.jpeg",
+            "nama" => "Cheel Gihon Bianinova",
+            "jabatan" => "Founder",
+            "pesan" => "Orang pertama yang mencetuskan ide dan mendirikan sebuah
+            program. Ia menggali ide, membuat rencana, serta mewujudkannya bersama
+            dengan Co-Founder dan tim lainnya.",
+        ],
+        [
+            "foto" => "christo.jpeg",
+            "nama" => "Christo Adriel Chandra",
+            "jabatan" => "Co-Founder",
+            "pesan" => "Bekerjasama dengan founder dan membantu founder dalam mendirikan sebuah program. Baik dari berbagi ide, saran, kritik, hingga sumber daya untuk tujuan yang terbaik.",
+        ],
+        [
+            "foto" => "ajeng.jpeg",
+            "nama" => "Tutut Wilujeng",
+            "jabatan" => "Human Resources",
+            "pesan" => "Mengelola dan mengoptimalkan perencanaan sumber daya manusia, serta merekrut orang yang tepat untuk penyokong perkembangan komunitas.",
+        ],
+        [
+            "foto" => "Edric.jpg",
+            "nama" => "Edric Galentino",
+            "jabatan" => "Web Developer",
+            "pesan" => "Merancang, membuat, dan mengembangkan situs web untuk mempermudah para anggota maupun admin dalam mencari informasi tentang Ambis Camp.",
+        ],
+    ]
+?>
 <!doctype html>
 <html lang="en">
 
@@ -65,13 +95,13 @@
                         <a class="nav-link" href="../">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href=".">About Us</a>
+                        <a class="nav-link" href="about.php">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Courses</a>
+                        <a class="nav-link" href="../Courses/courses.php">Courses</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Volunteer</a>
+                        <a class="nav-link" href="../Volunteer/volunteer.php">Volunteer</a>
                     </li>
                 </ul>
             </div>
@@ -82,6 +112,20 @@
         </div>
     </nav>
     <!-- akhir nav -->
+    <!-- awal jumbotron -->
+    <section class="jumbotron">
+        <div class="text-container">
+            <h1 class="judul">Welcome to</h1>
+            <h1 class="sub-judul">About us page!</h1>
+            <p>Di halaman ini kalian akan tau kami itu organisasi seperti apa, siapa foundernya, kapan berdirinya, dan
+                pokoknya semua hal tentang Ambis Camp!
+            </p>
+        </div>
+        <div class="img-container justify-content-center">
+            <img src="../img/header pages/about/bg.png" alt="Illustration" class="img">
+        </div>
+    </section>
+    <!-- akhir jumbotron -->
     <!-- awal about -->
     <section id="about">
         <div class="container" data-aos="fade-down" data-aos-duration="1000">
@@ -129,50 +173,28 @@
         <div class="container">
             <div class="row text-center mb-4" data-aos="fade-up" data-aos-duration="1000">
                 <div class="col">
-                    <h1>Team</h1>
+                    <h1>Community Experts</h1>
                 </div>
             </div>
             <div class="team-container">
-                <div class="row justify-content-center slider-card-testi mb-4 text-center container-card"
-                    data-aos="zoom-in-right" data-aos-duration="1000">
-                    <?php  
-                        $dataAdminInti = [
-                            [
-                                "foto" => "chel.jpeg",
-                                "nama" => "Cheel Gihon Bianinova",
-                                "jabatan" => "Founder"
-                            ],
-                            [
-                                "foto" => "christo.jpeg",
-                                "nama" => "Christo Adriel Chandra",
-                                "jabatan" => "Co-Founder"
-                            ],
-                            [
-                                "foto" => "ajeng.jpeg",
-                                "nama" => "Tutut Wilujeng",
-                                "jabatan" => "Human Resources"
-                            ],
-                            [
-                                "foto" => "Edric.jpg",
-                                "nama" => "Edric Galentino",
-                                "jabatan" => "Web Developer"
-                            ],
-                        ]
-                    ?>
+                <div class="row justify-content-center mb-4 text-center container-card" data-aos="zoom-in-right"
+                    data-aos-duration="1000">
                     <?php foreach ($dataAdminInti as $admin) : ?>
-                    <div class="card mb-4">
-                        <div class="img-team">
-                            <img class="rounded-circle ms-4" src="../img/Admin-AC/<?= $admin["nama"]; ?>"
-                                alt="testi-img">
-                        </div>
-                        <div class="isi-team">
-                            <div class="text-start">
-                                <p><?= $admin["nama"]; ?></p>
-                                <p><?= $admin["jabatan"]; ?></p>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate at,
-                                    modi maioresgnissimos accusamus, ullam aspernatur beatae a incidunt
-                                    repellendus?
-                                </p>
+                    <div class="col-6">
+                        <div class="card mb-3" style="max-width: 540px">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="../img/Admin-AC/<?= $admin["foto"]; ?>"
+                                        class="img-fluid rounded-circle profile" alt="Admin Image" />
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body text-start">
+                                        <h5 class="card-title"><?= $admin["nama"]; ?></h5>
+                                        <p class="card-text"><small class="text-muted"><?= $admin["jabatan"]; ?></small>
+                                        </p>
+                                        <p class="card-text"><?= $admin["pesan"]; ?></p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -207,34 +229,39 @@
                 <section>
                     <i class="icon fas fa-home"></i>
                     <div class="details">
-                        <span class="title">Title of Section 1</span>
-                        <span>1st Jan 2021</span>
+                        <span class="title">Awal pembentukan</span>
+                        <span>19 Juni 2021</span>
                     </div>
-                    <p>Lorem ipsum dolor sit ameters consectetur adipisicing elit. Sed qui veroes praesentium maiores,
-                        sint eos vero sapiente voluptas debitis dicta dolore.</p>
+                    <p>Pertama kali didirikan oleh Cheel, Christo, dan Ajeng dengan nama Ambis Nite yang berisi 512
+                        anggota dengan tujuan untuk meningkatkan wawasan
+                        para peserta Ambis Camp dan meningkatkan wawasan
+                        kalangan umum.
+                    </p>
                 </section>
             </div>
             <div class="row row-2">
                 <section>
                     <i class="icon fas fa-star"></i>
                     <div class="details">
-                        <span class="title">Title of Section 2</span>
-                        <span>2nd Jan 2021</span>
+                        <span class="title">Perubahan nama organisasi</span>
+                        <span>05 September 2021
+                        </span>
                     </div>
-                    <p class="text-end">Lorem ipsum dolor sit ameters consectetur adipisicing elit. Sed qui veroes
-                        praesentium maiores,
-                        sint eos vero sapiente voluptas debitis dicta dolore.</p>
+                    <p class="text-end">Ambis Nite berganti nama menjadi Ambis Camp serta regenerasi member dan admin
+                        untuk pertama kalinya
+                    </p>
                 </section>
             </div>
             <div class="row row-1">
                 <section>
                     <i class="icon fas fa-home"></i>
                     <div class="details">
-                        <span class="title">Title of Section 3</span>
-                        <span>3st Jan 2021</span>
+                        <span class="title">Ambis Camp menjalankan prokernya</span>
+                        <span>20 September 2021
+                        </span>
                     </div>
-                    <p>Lorem ipsum dolor sit ameters consectetur adipisicing elit. Sed qui veroes praesentium maiores,
-                        sint eos vero sapiente voluptas debitis dicta dolore.</p>
+                    <p>Pada tanggal ini, Ambis Camp pertama kali memulai kegiatan belajar-mengajarnya yang berarti salah
+                        satu program kerja serta tujuan awal Ambis Camp dibentuk sudah mulai tercapai!</p>
                 </section>
             </div>
             <div class="row row-2">
@@ -298,7 +325,7 @@
                     <h2>Contact Us</h2>
                     <ul>
                         <a href="http://wa.me/62881023795681" target="_blank">
-                            <li><img src="../ico/Whatsapp.png" alt="nav-logo-img">+62-881-0237-95681 (Ka Cheel)</li>
+                            <li><img src="../ico/Whatsapp.png" alt="nav-logo-img">+62-881-0237-95681 (Cheel)</li>
                         </a>
                         <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJfrKsTngzQBRmfswhPnBrCCjbhsBxHqctXlqPMqnVDcfdkWLpvKxcRmMFJhgqbjMCPfwzg"
                             target="_blank">
@@ -348,7 +375,7 @@
     });
     </script>
     <script>
-    $('.slider-card-testi').slick({
+    $('.slider-card-team').slick({
         dots: true,
         infinite: true,
         speed: 1000,

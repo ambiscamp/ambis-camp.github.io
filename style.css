@@ -124,7 +124,7 @@ section{
 }
 .register-btn:hover{
     color: #cc4f53;
-    background-color:transparent;
+    background-color:white;
     border: 1px solid #cc4f53;
 }
 .img-container{
@@ -163,18 +163,6 @@ section{
 }
 #testimoni .slick-list {
 	margin: 15px -15px;
-}
-#course .course-saintek .slick-slide {
-	margin: 15px 15px;
-}
-#course .course-saintek .slick-list {
-	margin: 15px -15px;
-}
-#course .slick-slide {
-	margin: 15px 10px;
-}
-#course .slick-list {
-	margin: 15px -10px;
 }
 /* image slick slider */
 #course .card img, #testimoni .card img, #team .card img{

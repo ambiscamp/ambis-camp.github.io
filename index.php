@@ -80,10 +80,10 @@
                         <a class="nav-link" href="About-Us/about.php">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Courses</a>
+                        <a class="nav-link" href="Courses/courses.php">Courses</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Volunteer</a>
+                        <a class="nav-link" href="Volunteer/volunteer.php">Volunteer</a>
                     </li>
                 </ul>
             </div>
@@ -189,181 +189,33 @@
         </svg>
     </section>
     <!-- akhir timeline -->
-    <!-- awal course -->
-    <section id="course">
+    <!-- awal chart -->
+    <section id="chart">
         <div class="container">
             <div class="row text-center mb-4" data-aos="fade-up" data-aos-duration="1000">
                 <div class="col">
-                    <h1>Available Courses</h1>
+                    <h2>Jenjang pendidikan member kami sejauh ini:</h2>
                 </div>
             </div>
-            <div class="course-saintek">
-                <h3 class="saintek text-start">Saintek</h3>
-                <div class="row justify-content-center slider-card ps-2 mb-4 text-center container-card"
-                    data-aos="zoom-in-up" data-aos-duration="1000">
-                    <?php foreach( array_combine($imgCoursesSaintek, $namaCoursesSaintek) as $imgCoursesSaintek => $namaCoursesSaintek)  : ?>
-                    <div class="col-md-2 col-6 mb-4">
-                        <div class="card">
-                            <img src="img/<?= $imgCoursesSaintek; ?>.png" class="card-img-top" alt="Project 1">
-                            <div class="card-body">
-                                <p class="card-text"><?= $namaCoursesSaintek; ?></p>
-                            </div>
-                        </div>
-                    </div>
-                    <?php endforeach ?>
-                </div>
-            </div>
-
-            <div class="course-soshum">
-                <h3 class="soshum text-end">Soshum</h3>
-                <div class="row justify-content-center slider-card mb-4 text-center container-card"
-                    data-aos="zoom-in-right" data-aos-duration="1000">
-                    <?php foreach( array_combine($imgCoursesSoshum, $namaCoursesSoshum) as $imgCoursesSoshum => $namaCoursesSoshum)  : ?>
-                    <div class="col-md-2 col-6 mb-4">
-                        <div class="card">
-                            <img src="img/<?= $imgCoursesSoshum; ?>.png" class="card-img-top" alt="Project 1">
-                            <div class="card-body">
-                                <p class="card-text"><?= $namaCoursesSoshum; ?></p>
-                            </div>
-                        </div>
-                    </div>
-                    <?php endforeach ?>
-                </div>
-            </div>
-
-            <div class="course-ekstra">
-                <h3 class="ekstra text-start">Ekstra Ambis</h3>
-                <div class="row justify-content-center mb-4 text-center slider-card container-card"
-                    data-aos="zoom-in-right" data-aos-duration="1000">
-                    <?php foreach( array_combine($imgCoursesEkstra, $namaCoursesEkstra) as $imgCoursesEkstra => $namaCoursesEkstra)  : ?>
-                    <div class="col-md-2 col-6 mb-4">
-                        <div class="card">
-                            <img src="img/<?= $imgCoursesEkstra; ?>.png" class="card-img-top" alt="Project 1">
-                            <div class="card-body">
-                                <p class="card-text"><?= $namaCoursesEkstra; ?></p>
-                            </div>
-                        </div>
-                    </div>
-                    <?php endforeach ?>
+            <div class="row mb-4" data-aos="fade-up" data-aos-duration="1000">
+                <div class="chart_wrap">
+                    <div id="piechart_3d" class="piechart"></div>
                 </div>
             </div>
         </div>
-        <svg class="akhir-about" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="#D2E7FE" fill-opacity="1"
-                d="M0,192L48,197.3C96,203,192,213,288,224C384,235,480,245,576,234.7C672,224,768,192,864,186.7C960,181,1056,203,1152,224C1248,245,1344,267,1392,277.3L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+        <svg class="akhir-about" data-aos="fade-up" data-aos-duration="1000" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1440 320">
+            <path fill="#fff" fill-opacity="1"
+                d="M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
             </path>
         </svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path fill="#E4F1FF" fill-opacity="1"
-                d="M0,256L48,218.7C96,181,192,107,288,74.7C384,43,480,53,576,69.3C672,85,768,107,864,128C960,149,1056,171,1152,160C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+                d="M0,64L48,64C96,64,192,64,288,85.3C384,107,480,149,576,144C672,139,768,85,864,90.7C960,96,1056,160,1152,154.7C1248,149,1344,75,1392,37.3L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
             </path>
         </svg>
     </section>
-    <!-- akhir course -->
-    <!-- awal team -->
-    <section id="team">
-        <div class="container">
-            <div class="row text-center mb-4" data-aos="fade-up" data-aos-duration="1000">
-                <div class="col">
-                    <h1>Team</h1>
-                </div>
-            </div>
-            <div class="team-container">
-                <div class="row justify-content-center slider-card-testi mb-4 text-center container-card"
-                    data-aos="zoom-in-right" data-aos-duration="1000">
-                    <div class="card col-4 mb-4">
-                        <div class="img-testi">
-                            <a class="navbar-brand" href="#">
-                                <img src="ico/favicon-96x96.png" alt="testi-img"> AMBIS CAMP
-                            </a>
-                        </div>
-                        <div class="isi-testi">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate at, modi maiores sint
-                                incidunt ut nihil alias fugit culpa fugiat, itaque saepe eos officia consectetur?
-                                Veritatis vero dignissimos accusamus, ullam aspernatur beatae a incidunt repellendus?
-                            </p>
-                        </div>
-                    </div>
-                    <div class="card col-4 mb-4">
-                        <div class="img-testi">
-                            <a class="navbar-brand" href="#">
-                                <img src="ico/favicon-96x96.png" alt="testi-img"> AMBIS CAMP
-                            </a>
-                        </div>
-                        <div class="isi-testi">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate at, modi maiores sint
-                                incidunt ut nihil alias fugit culpa fugiat, itaque saepe eos officia consectetur?
-                                Veritatis vero dignissimos accusamus, ullam aspernatur beatae a incidunt repellendus?
-                            </p>
-                        </div>
-                    </div>
-                    <div class="card col-4 mb-4">
-                        <div class="img-testi">
-                            <a class="navbar-brand" href="#">
-                                <img src="ico/favicon-96x96.png" alt="testi-img"> AMBIS CAMP
-                            </a>
-                        </div>
-                        <div class="isi-testi">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate at, modi maiores sint
-                                incidunt ut nihil alias fugit culpa fugiat, itaque saepe eos officia consectetur?
-                                Veritatis vero dignissimos accusamus, ullam aspernatur beatae a incidunt repellendus?
-                            </p>
-                        </div>
-                    </div>
-                    <div class="card col-4 mb-4">
-                        <div class="img-testi">
-                            <a class="navbar-brand" href="#">
-                                <img src="ico/favicon-96x96.png" alt="testi-img"> AMBIS CAMP
-                            </a>
-                        </div>
-                        <div class="isi-testi">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate at, modi maiores sint
-                                incidunt ut nihil alias fugit culpa fugiat, itaque saepe eos officia consectetur?
-                                Veritatis vero dignissimos accusamus, ullam aspernatur beatae a incidunt repellendus?
-                            </p>
-                        </div>
-                    </div>
-                    <div class="card col-4 mb-4">
-                        <div class="img-testi">
-                            <a class="navbar-brand" href="#">
-                                <img src="ico/favicon-96x96.png" alt="testi-img"> AMBIS CAMP
-                            </a>
-                        </div>
-                        <div class="isi-testi">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate at, modi maiores sint
-                                incidunt ut nihil alias fugit culpa fugiat, itaque saepe eos officia consectetur?
-                                Veritatis vero dignissimos accusamus, ullam aspernatur beatae a incidunt repellendus?
-                            </p>
-                        </div>
-                    </div>
-                    <div class="card col-4 mb-4">
-                        <div class="img-testi">
-                            <a class="navbar-brand" href="#">
-                                <img src="ico/favicon-96x96.png" alt="testi-img"> AMBIS CAMP
-                            </a>
-                        </div>
-                        <div class="isi-testi">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate at, modi maiores sint
-                                incidunt ut nihil alias fugit culpa fugiat, itaque saepe eos officia consectetur?
-                                Veritatis vero dignissimos accusamus, ullam aspernatur beatae a incidunt repellendus?
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <svg class="akhir-about" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="#D2E7FE" fill-opacity="1"
-                d="M0,192L48,197.3C96,203,192,213,288,224C384,235,480,245,576,234.7C672,224,768,192,864,186.7C960,181,1056,203,1152,224C1248,245,1344,267,1392,277.3L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
-            </path>
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="#E4F1FF" fill-opacity="1"
-                d="M0,256L48,218.7C96,181,192,107,288,74.7C384,43,480,53,576,69.3C672,85,768,107,864,128C960,149,1056,171,1152,160C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
-            </path>
-        </svg>
-    </section>
-    <!-- akhir team -->
+    <!-- akhir chart -->
     <!-- awal testimoni -->
     <section id="testimoni">
         <div class="container">
@@ -501,6 +353,8 @@
                         <p>Kamu juga berkesempatan untuk menjadi pengurus Ambis Camp loh! Jangan sia-siakan kesempatan
                             ini, yuk berorganisasi agar mendapatkan banyak pengalaman seru dan bisa bermanfaat bagi
                             banyak orang.</p>
+                        <a href="Volunteer/volunteer.php"><button class="btn btn-success register-btn">Learn
+                                more</button></a>
                     </div>
                 </div>
             </div>
@@ -542,33 +396,6 @@
         </svg>
     </section>
     <!-- akhir join -->
-    <!-- awal chart -->
-    <section id="chart">
-        <div class="container">
-            <div class="row text-center mb-4" data-aos="fade-up" data-aos-duration="1000">
-                <div class="col">
-                    <h2>Jenjang pendidikan member kami sejauh ini:</h2>
-                </div>
-            </div>
-            <div class="row mb-4" data-aos="fade-up" data-aos-duration="1000">
-                <div class="chart_wrap">
-                    <div id="piechart_3d" class="piechart"></div>
-                </div>
-            </div>
-        </div>
-        <svg class="akhir-about" data-aos="fade-up" data-aos-duration="1000" xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1440 320">
-            <path fill="#fff" fill-opacity="1"
-                d="M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
-            </path>
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="#E4F1FF" fill-opacity="1"
-                d="M0,64L48,64C96,64,192,64,288,85.3C384,107,480,149,576,144C672,139,768,85,864,90.7C960,96,1056,160,1152,154.7C1248,149,1344,75,1392,37.3L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
-            </path>
-        </svg>
-    </section>
-    <!-- akhir chart -->
     <!-- awal footer -->
     <footer class="text-black text-center pb-3">
         <div class="row justify-content-evenly container">
@@ -582,7 +409,7 @@
                     <h2>Contact Us</h2>
                     <ul>
                         <a href="http://wa.me/62881023795681" target="_blank">
-                            <li><img src="ico/Whatsapp.png" alt="nav-logo-img">+62-881-0237-95681 (Ka Cheel)</li>
+                            <li><img src="ico/Whatsapp.png" alt="nav-logo-img">+62-881-0237-95681 (Cheel)</li>
                         </a>
                         <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJfrKsTngzQBRmfswhPnBrCCjbhsBxHqctXlqPMqnVDcfdkWLpvKxcRmMFJhgqbjMCPfwzg"
                             target="_blank">
@@ -633,7 +460,7 @@
     });
     </script>
     <!-- script slick -->
-    <script type="text/javascript"">
+    <script type="text/javascript">
     $('.slider-card').slick({
         dots: true,
         infinite: true,
@@ -643,30 +470,33 @@
         adaptiveHeight: true,
         autoplay: true,
         autoplaySpeed: 2000,
-        arrows:false,
+        arrows: false,
         responsive: [{
-            breakpoint: 1024,
-            settings: {
-                slidesToShow: 4,
-                slidesToScroll: 4,
-                infinite: true,
-                dots: true,
-                arrows:false
-            }},
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
+                    infinite: true,
+                    dots: true,
+                    arrows: false
+                }
+            },
             {
-            breakpoint: 600,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                arrows:false
-            }},
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    arrows: false
+                }
+            },
             {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2,
-                arrows:false
-            }}
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    arrows: false
+                }
+            }
         ]
     });
     $('.slider-card-testi').slick({
@@ -678,30 +508,33 @@
         adaptiveHeight: true,
         autoplay: true,
         autoplaySpeed: 2000,
-        arrows:false,
+        arrows: false,
         responsive: [{
-            breakpoint: 1024,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2,
-                infinite: true,
-                dots: true,
-                arrows:false,
-            }},
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    infinite: true,
+                    dots: true,
+                    arrows: false,
+                }
+            },
             {
-            breakpoint: 600,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                arrows:false
-            }},
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false
+                }
+            },
             {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                arrows:false
-            }}
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false
+                }
+            }
         ]
     });
     </script>
