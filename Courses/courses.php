@@ -86,29 +86,26 @@
         [
             "foto" => "pu",
             "nama" => "PU",
-            "info" => "Some quick example text to build on the card title and make up the
-            bulk of the card's content.",
+            "info" => "Mempelajari tentang simpulan logis sesuatu yang akan mungkin terjadi berdasarkan teks Penalaran Analitik.",
             "available" => "Available",
         ],
         [
             "foto" => "pk",
             "nama" => "PK",
-            "info" => "Some quick example text to build on the card title and make up the
-            bulk of the card's content.",
+            "info" => "Mempelajari tentang logika dan matematika dasar, serta pertanyaan dengan informasi pilihan (1), (2), (3), dan (4)",
             "available" => "Available",
         ],
         [
             "foto" => "ppu",
             "nama" => "PPU",
-            "info" => "Some quick example text to build on the card title and make up the
-            bulk of the card's content.",
+            "info" => "Mempelajari tentang cara memahami inti bacaan dan membuat kesimpulan berdasarkan informasi teks.
+            ",
             "available" => "Available",
         ],
         [
             "foto" => "pbm",
             "nama" => "PBM",
-            "info" => "Some quick example text to build on the card title and make up the
-            bulk of the card's content.",
+            "info" => "Mempelajari tentang penalaran kebahasaan dan pemahaman terkait kaidah penulisan Bahasa Indonesia yang baik dan benar.",
             "available" => "Available",
         ],
     ];
@@ -195,8 +192,7 @@
         [
             "foto" => "sastra",
             "nama" => "Kepenulisan",
-            "info" => "Some quick example text to build on the card title and make up the
-            bulk of the card's content",
+            "info" => "Mempelajari tentang kaidah kepenulisan yang benar serta tata tulis ilmiah",
             "available" => "Not Available",
         ],
         [
@@ -209,8 +205,7 @@
         [
             "foto" => "senirupa",
             "nama" => "Seni Rupa",
-            "info" => "Some quick example text to build on the card title and make up the
-            bulk of the card's content.",
+            "info" => "Mempelajari tentang keindahan yang akan di tuangkan dalam aspek 2D maupun 3D",
             "available" => "Available",
         ],
     ];
@@ -341,7 +336,9 @@
     <!-- AOS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- My CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>">
+
+
 
     <title>Ambis Camp</title>
 </head>
@@ -390,7 +387,7 @@
             </p>
         </div>
         <div class="img-container justify-content-center">
-            <img src="../img/header pages/course/bg.png" alt="Illustration" class="img">
+            <img src="../img/header-pages/course/bg.png" alt="Illustration" class="img">
         </div>
     </section>
     <!-- akhir jumbotron -->
@@ -400,6 +397,7 @@
             <div class="row text-center mb-4" data-aos="fade-up" data-aos-duration="1000">
                 <div class="col">
                     <h1>Available Courses</h1>
+                    <h5>Kelas yang tersedia</h5>
                 </div>
             </div>
             <div class="course-saintek">
@@ -478,14 +476,15 @@
                 </div>
             </div>
         </div>
-        <svg class="akhir-about" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="#D2E7FE" fill-opacity="1"
-                d="M0,192L48,197.3C96,203,192,213,288,224C384,235,480,245,576,234.7C672,224,768,192,864,186.7C960,181,1056,203,1152,224C1248,245,1344,267,1392,277.3L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+        <svg class="akhir-about" data-aos="fade-up" data-aos-duration="1000" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1440 320">
+            <path fill="#fff" fill-opacity="1"
+                d="M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
             </path>
         </svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path fill="#E4F1FF" fill-opacity="1"
-                d="M0,256L48,218.7C96,181,192,107,288,74.7C384,43,480,53,576,69.3C672,85,768,107,864,128C960,149,1056,171,1152,160C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+                d="M0,64L48,64C96,64,192,64,288,85.3C384,107,480,149,576,144C672,139,768,85,864,90.7C960,96,1056,160,1152,154.7C1248,149,1344,75,1392,37.3L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
             </path>
         </svg>
     </section>
@@ -496,6 +495,7 @@
             <div class="row text-center mb-4" data-aos="fade-up" data-aos-duration="1000">
                 <div class="col">
                     <h1>FAQ</h1>
+                    <h5>Pertanyaan yang sering ditanyakan</h5>
                 </div>
             </div>
             <div class="row isi-faq">
@@ -526,6 +526,16 @@
                 </div>
             </div>
         </div>
+        <svg class="akhir-about" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#D2E7FE" fill-opacity="1"
+                d="M0,192L48,197.3C96,203,192,213,288,224C384,235,480,245,576,234.7C672,224,768,192,864,186.7C960,181,1056,203,1152,224C1248,245,1344,267,1392,277.3L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+            </path>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#E4F1FF" fill-opacity="1"
+                d="M0,256L48,218.7C96,181,192,107,288,74.7C384,43,480,53,576,69.3C672,85,768,107,864,128C960,149,1056,171,1152,160C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+            </path>
+        </svg>
     </section>
     <!-- akhir faq -->
     <!-- awal footer -->

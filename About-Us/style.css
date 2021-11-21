@@ -20,6 +20,7 @@ body {
     padding: 0;
     font-family: 'Metropolis Med', sans-serif;
     transition: 0.5s;
+    overflow-x: hidden;
 }
 nav{
     font-family: 'Quicksand', sans-serif;
@@ -79,13 +80,19 @@ nav.nav-transparent a, nav.hide-nav a{
 section{
     padding-top: 2rem;
 }
+h5{
+    opacity: .7;
+}
 .jumbotron{
     width: 100%;
     height: 100vh;
+    background-image: url(../img/header-pages/bg.png);
     margin: auto;
     padding: 80px 0 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    border-bottom-left-radius: 5rem;
+    border-bottom-right-radius: 5rem;
 }
 .text-container{
     width: 80%;
@@ -128,7 +135,7 @@ section{
 #team .slick-list {
 	margin: 15px -15px;
 }
-.jumbotron, #timeline, footer {
+.jumbotron, #timeline {
     background-color: #D2E7FE;
 }
 #team .profile {
@@ -213,6 +220,9 @@ footer .visit-us{
 }
 footer .container .left-side .contact-us a img:hover{
     transform:rotate(-20deg);
+}
+.visit-us img:hover{
+    transform:rotateZ(20deg);
 }
 .visit-us img:hover{
     transform:rotateZ(20deg);
@@ -340,16 +350,6 @@ footer .container .left-side .contact-us a img:hover{
       left: -60px;
     }
   }
-  @media(max-width: 440px){
-    .wrapper .center-line,
-    .row section::before,
-    .row section .icon{
-      display: none;
-    }
-    .wrapper .row{
-      margin: 10px 0;
-    }
-  }
 
 
 
@@ -369,6 +369,9 @@ footer .container .left-side .contact-us a img:hover{
 
 /* Responsive */
 @media screen and  (max-width:576px) {
+    body{
+        overflow-x: hidden;
+    }
     nav.nav-transparent{
         background-color: white;
     }
@@ -393,10 +396,11 @@ footer .container .left-side .contact-us a img:hover{
         height: fit-content;
     }
     .jumbotron .img-container img.img{
-        position: relative;
-        right: 0px;
         height: 200px;
-        margin: 0 auto 20px;
+        position: relative;
+        left: 0;
+        right: 0;
+        margin: 0 auto 10px;
     }
     .team-container .container-card{
         width: 100%;

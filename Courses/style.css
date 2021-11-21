@@ -18,6 +18,7 @@ body {
     width: 100%;
     font-family: 'Metropolis Med', sans-serif;
     transition: 0.5s;
+    overflow-x: hidden;
 }
 nav{
     font-family: 'Quicksand', sans-serif;
@@ -80,6 +81,8 @@ section{
 .jumbotron{
     width: 100%;
     height: 100vh;
+    background-image: url(../img/header-pages/bg.png);
+    background-position: top right;
     margin: auto;
     padding: 80px 0 0;
     display: grid;
@@ -101,6 +104,9 @@ section{
     font-size: 3.5rem;
     font-family: 'Poppins', sans-serif;
 }
+h5{
+    opacity: .7;
+}
 .text-container p{
     font-family: 'Quicksand', sans-serif;
     font-size: 1.1rem;
@@ -117,7 +123,7 @@ section{
     right: 4rem;
     height: 600px;
 }
-.jumbotron, #volunteer, #chart, #team {
+.jumbotron, footer {
     background-color: #D2E7FE;
 }
 #course .card,#team .card{
@@ -227,6 +233,9 @@ footer .visit-us{
 footer .container .left-side .contact-us a img:hover{
     transform:rotate(-20deg);
 }
+.visit-us img:hover{
+    transform:rotateZ(20deg);
+}
 
 
 
@@ -253,6 +262,9 @@ footer .container .left-side .contact-us a img:hover{
 
 /* Responsive */
 @media screen and (max-width:576px) {
+    body{
+        overflow-x: hidden;
+    }
     nav.nav-transparent{
         background-color: white;
     }

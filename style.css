@@ -23,6 +23,7 @@ body {
     background-size: 100vmax;
     background-position-y: -7.2rem;
     transition: 0.5s;
+    overflow-x: hidden;
 }
 nav{
     font-family: 'Quicksand', sans-serif;
@@ -143,7 +144,7 @@ section{
     font-style: italic;
     font-size: larger;
 }
-#timeline, #volunteer, #chart, #team {
+#volunteer, #chart, footer{
     background-color: #D2E7FE;
 }
 #course .card,#team .card{
@@ -156,6 +157,10 @@ section{
     transition: 0.2s;
     border-radius: 1.2rem;
     background-color: transparent;
+}
+#testimoni .testi-container .profile {
+    padding: 1rem;
+    margin-left: 1rem;
 }
 /* Margin Slick Slider */
 #testimoni .slick-slide {
@@ -409,7 +414,7 @@ footer .container .left-side .contact-us a img:hover{
 
 
 /* Responsive */
-@media screen and (min-width: 320px) and (max-width:384px) {
+@media screen and (max-width:384px) {
     body {
         background-size: 130vmax;
         background-position-y:-90px;
@@ -448,6 +453,15 @@ footer .container .left-side .contact-us a img:hover{
         margin-bottom: 20px;
         width: 75%;
         height: 75%;
+    }
+    #testimoni .testi-container .profile {
+        width: 40%;
+        padding: 1rem;
+        margin-left: 3rem;
+        justify-content: center;
+    }
+    #testimoni .testi-container .card-body{
+        margin-left: 1rem;
     }
     .navbar .nav-img{
         width: 250%;
@@ -491,7 +505,7 @@ footer .container .left-side .contact-us a img:hover{
         white-space: nowrap;
     }
 } 
-@media screen and (min-width: 384px) and (max-width:666px) {
+@media screen and (max-width:666px) {
     body {
         background-size: 150vmax;
         background-position-y:-155px;
@@ -505,6 +519,14 @@ footer .container .left-side .contact-us a img:hover{
         display: flex;
         flex-direction: column-reverse;
         text-align: center;
+    }
+    #testimoni .testi-container .profile {
+        width: 60%;
+        padding: 1rem;
+        margin-left: 0;
+    }
+    #testimoni .testi-container .card-body{
+        margin-left: 1rem;
     }
     .grid{
         width: 100%;
@@ -586,6 +608,15 @@ footer .container .left-side .contact-us a img:hover{
         display: grid;
         grid-template-columns: 1fr 1fr;
         text-align: center;
+    }
+    #testimoni .testi-container .profile {
+        width: 80%;
+        padding: 1rem;
+        margin: auto;
+        justify-content: center;
+    }
+    #testimoni .testi-container .card-body{
+        margin-left: 1rem;
     }
     .jumbotron .img-container img.img{
         position: relative;

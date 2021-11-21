@@ -18,6 +18,7 @@ body {
     width: 100%;
     font-family: 'Metropolis Med', sans-serif;
     transition: 0.5s;
+    overflow-x: hidden;
 }
 nav{
     font-family: 'Quicksand', sans-serif;
@@ -80,6 +81,7 @@ section{
 .jumbotron{
     width: 100%;
     height: 100vh;
+    background-image: url(../img/header-pages/bg.png);
     margin: auto;
     padding: 80px 0 0;
     display: grid;
@@ -113,49 +115,123 @@ section{
 .jumbotron .img-container img.img{
     position: relative;
     bottom: 2rem;
-    z-index: 0;
     left: 4rem;
     height: 600px;
 }
-.jumbotron, #volunteer, #chart, #team {
+.jumbotron, #timeline, #join {
     background-color: #D2E7FE;
 }
-#course .card,#team .card{
+#testimoni .card, #requirements .card{
     transition: 0.2s;
     border-radius: 1.2rem;
     background-color: transparent;
+}
+#requirements .card{
     border: transparent;
+    width: 70%;
+    display: flex;
+    flex-wrap: nowrap;
+    max-height: 80px;
+    margin:0 auto;
+    padding: 0;
+}
+#requirements .card p{
+    display: inline;
+    white-space: pre-wrap;
+    top: -10px;
+    font-weight: 500;
+}
+#testimoni .testi-container .profile {
+    padding: 1rem;
+    margin-left: 1rem;
 }
 /* Margin Slick Slider */
-#course .slick-slide {
+#testimoni .container .slick-slide {
 	margin: 15px 15px;
 }
-#course .slick-list {
-	margin: -15px -15px;
+#testimoni .container .slick-list {
+	margin: 15px -15px;
 }
 /* image slick slider */
-#course .card img{
+#testimoni .card img{
     padding:10px;
 }
-#course .card .card-body p{
+#testimoni .card .card-body p{
     top: -10px;
     font-weight: 500;
     font-family: 'Quicksand', sans-serif;
 }
-#course h3, h3.saintek{
-    width: max-content;
-    margin: 20px;
+#benefits ul {
+    list-style: none;
 }
-.card:hover{
+#benefits ul li::before, #requirements ul li::before {
+    content: "";
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/fb-heart.gif);
+    background-size: contain;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    position: relative;
+    top: 0.1rem;
+    margin-right: 0.2rem;
+}
+#requirements ul li::before{
+    background-image: url(../img/check.png);
+}
+.img-testi{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+.img-testi a{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    margin-left: 15px;
+}
+.img-testi a p{
+    width: 100%;
+    color: black;
+    position: relative;
+    top: 1.3em;
+    right: 2em;
+}
+.img-testi img{
+    width: 4em;
+    display: flex;
+    align-items: flex-start;
+}
+.isi-testi{
+    width: 100%;
+    padding: 0 30px;
+    margin:0 auto;
+    text-align: left;
+}
+#testimoni .card:hover{
     margin-top: -5px;
     transition: 0.2s;
     box-shadow: 0px 0px 20px #8bb2df;
+} 
+.register-btn {
+    width: 100%;
+    height: fit-content;
+    margin: auto;
+    text-align: center;
 }
-#course .card-btn {
-    color: #cc4f53;
-    background-color: transparent;
-    border: 1px solid #cc4f53;
+.register-btn{
+    font-family: 'Quicksand', sans-serif;
+    width: 120px;
     border-radius: 2em;
+    margin: 1em auto;
+    border: 0;
+    background-color:#cc4f53;
+    border: 1px solid transparent;
+}
+.register-btn:hover{
+    color: #cc4f53;
+    background-color:white;
+    border: 1px solid #cc4f53;
 }
 footer{
     padding-top: 2rem;
@@ -181,7 +257,7 @@ footer .right-side{
     width: max-content;
     height: inherit;
 }
-footer .right-side img{
+footer .right-side img, #requirements .card img{
     transform: scale(0.5);
 }
 footer .container .left-side{
@@ -227,6 +303,9 @@ footer .visit-us{
 footer .container .left-side .contact-us a img:hover{
     transform:rotate(-20deg);
 }
+.visit-us img:hover{
+    transform:rotateZ(20deg);
+}
 
 
 
@@ -235,13 +314,115 @@ footer .container .left-side .contact-us a img:hover{
 
 
 
+/* Timeline CSS CP Lepage */
+.timeline-container{
+    background-color: #fff;
+    color: #00438b;
+    height: 100%;
+}
+.circle{
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 50%;
+    background-color: #00438b;
+    color: #fff;
+    max-height: 50px;
+}
+.how-it-works.row{
+    display: flex;
+    font-family: 'Quicksand', sans-serif;
+}
+.how-it-works.row .col-2{
+    display: inline-flex;
+    align-self: stretch;
+    align-items: center;
+    justify-content: center;
+}
+.how-it-works.row .col-2::after{
+    content: '';
+    position: relative;
+    border-left: 3px solid #00438b;
+    z-index: 1;
+}
+.timeline div{
+    padding: 0;
+    height: 40px;
+}
+.timeline hr{
+    border-top: 3px solid #00438b;
+    margin: 0;
+    top: 17px;
+    position: relative;
+    opacity: 1;
+}
+.timeline .col-2{
+    display: flex;
+    overflow: hidden;
+}
+.timeline .corner{
+    border: 3.8px solid #00438b;
+    width: 100%;
+    position: relative;
+    border-radius: 15px;
+}
+.timeline .top-right{
+    left: 50%;
+    top: -50%;
+}
+.timeline .top-left{
+    left: -50%;
+    top: -50%;
+}
+.timeline .left-bottom{
+    left: -50%;
+    top: calc(50% - 3px);
+}
+.timeline .right-bottom{
+    left: 50%;
+    top: calc(50% - 3px);
+}
 
 
-
-
-
-
-
+/* 
+.button {
+    display: inline-block;
+    border-radius: 10rem;
+    color: #fff;
+    letter-spacing: 0.15rem;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+  .button:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10rem;
+    z-index: -2;
+  }
+  .button:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #cde3fc;
+    transition: all 0.3s;
+    border-radius: 10rem;
+    z-index: -1;
+  }
+  .button:hover {
+    color: #fff;
+  }
+  .button:hover:before {
+    width: 100%;
+  } */
+  
 
 
 
@@ -253,6 +434,9 @@ footer .container .left-side .contact-us a img:hover{
 
 /* Responsive */
 @media screen and (max-width:576px) {
+    body{
+        overflow-x: hidden;
+    }
     nav.nav-transparent{
         background-color: white;
     }
@@ -290,6 +474,29 @@ footer .container .left-side .contact-us a img:hover{
         right: 0;
         height: 200px;
         margin: 0 auto 10px;
+    }
+    .testi-container .container-card{
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+    }
+    #testimoni .testi-container .profile {
+        width: 40%;
+        padding: 1rem;
+        margin-left: 3rem;
+        justify-content: center;
+    }
+    #testimoni .testi-container .card-body{
+        margin-left: 1rem;
+    }
+    .register-btn{
+        width: 100px;
+        font-size: .8em;
+        margin: 0 auto;
+        border-radius: 2em;
+        border: 0;
+        border: 1px solid transparent;
+        background-color: #cc4f53;
     }
     footer .container{
         width: 100%;
@@ -346,12 +553,28 @@ footer .container .left-side .contact-us a img:hover{
         height: 300px;
         margin: 0 auto 10px;
     }
-    #faq .isi-faq{
+    .testi-container .container-card{
         width: 100%;
+        margin: 0 auto;
+        padding: 0;
+    }
+    #testimoni .testi-container .profile {
+        width: 80%;
+        padding: 1rem;
         margin: auto;
-        display: flex;
-        flex-direction: column-reverse;
-        text-align: center;
+        justify-content: center;
+    }
+    #testimoni .testi-container .card-body{
+        margin-left: 1rem;
+    }
+    .register-btn{
+        width: 100%;
+        margin-top: 0px;
+        border-radius: 2em;
+        border: 0;
+        border: 1px solid transparent;
+        background-color: #cc4f53;
+        align-items: center;
     }
     footer .container{
         width: 100%;
