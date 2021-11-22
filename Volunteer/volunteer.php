@@ -35,24 +35,6 @@
             "isi" => "Alhamdulillah nyaman gara gara ada dia :v",
         ],
     ];
-    $req = [
-        [
-            "isi" => "Berusia minimal 16 tahun"
-        ],
-        [
-            "isi" => "Bersedia secara sukarela"
-        ],
-        [
-            "isi" => "Tidak dalam masa sibuk"
-        ],
-        [
-            "isi" => "Menguasai divisi yang dipilih"
-        ],
-        [
-            "isi" => "Dapat berinteraksi dengan baik
-            kepada member maupun admin lain"
-        ],
-    ];
     $req2 = [
         [
             "isi" => "Memiliki rasa kekeluargaan"
@@ -179,16 +161,24 @@
             <div class="row isi-req">
                 <div class="col">
                     <ul class="list-group">
-                        <?php foreach ($req as $req) : ?>
-                        <li class="list-group-item " style="border: none"><?= $req["isi"]; ?></li>
-                        <?php endforeach ?>
+                        <li class="list-group-item" style="border: none">Berusia minimal 16 tahun</li>
+                        <li class="list-group-item" style="border: none">Bersedia secara sukarela</li>
+                        <li class="list-group-item" style="border: none">Tidak dalam masa sibuk</li>
+                        <li class="list-group-item" style="border: none">Menguasai divisi yang dipilih</li>
+                        <li class="list-group-item" style="border: none">Dapat berinteraksi dengan baik
+                            kepada member maupun admin lain</li>
                     </ul>
                 </div>
                 <div class="col">
                     <ul class="list-group">
-                        <?php foreach ($req2 as $req) : ?>
-                        <li class="list-group-item" style="border: none"><?= $req["isi"]; ?></li>
-                        <?php endforeach ?>
+                        <li class="list-group-item" style="border: none">
+                            Memiliki rasa kekeluargaan</li>
+                        <li class="list-group-item" style="border: none">
+                            Niat dan bertanggung jawab</li>
+                        <li class="list-group-item" style="border: none">
+                            Dapat bekerja dalam tim</li>
+                        <li class="list-group-item" style="border: none">
+                            Bersedia memberi masukan untuk perkembangan grup</li>
                     </ul>
                 </div>
             </div>
@@ -384,7 +374,7 @@
                 <div class="col text-center">
                     <h3>Ingin tau jabatan apa yang lagi dibuka? Yuk klik Join Us untuk mengetahui
                         semua jabatan yang sedang kita buka.</h3>
-                    <a href="../Landing-Page/form-main.php"><button class="btn btn-success register-btn">Join Us
+                    <a href="../Landing-Page/form-main.html"><button class="btn btn-success register-btn">Join Us
                         </button></a>
                 </div>
             </div>
