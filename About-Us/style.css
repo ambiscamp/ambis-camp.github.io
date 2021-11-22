@@ -119,7 +119,6 @@ h5{
 }
 .jumbotron .img-container img.img{
     position: relative;
-    z-index: 1;
     right: 40px;
     height: 500px;
 }
@@ -369,11 +368,18 @@ footer .container .left-side .contact-us a img:hover{
 
 /* Responsive */
 @media screen and  (max-width:576px) {
-    body{
+    body,section{
         overflow-x: hidden;
     }
     nav.nav-transparent{
         background-color: white;
+    }
+    .navbar .nav-img{
+        width: 250%;
+        height: 100%;
+        position: absolute;
+        left: -20px;
+        z-index: -1;
     }
     .jumbotron{
         width: 100%;
@@ -384,6 +390,11 @@ footer .container .left-side .contact-us a img:hover{
         text-align: center;
         border-bottom-left-radius: 1rem;
         border-bottom-right-radius: 1rem;
+    }
+    .isi-about{
+        margin: 0 20px;
+        display: flex;
+        flex-direction: row;
     }
     .text-container{
         width: 80%;
@@ -396,10 +407,10 @@ footer .container .left-side .contact-us a img:hover{
         height: fit-content;
     }
     .jumbotron .img-container img.img{
-        height: 200px;
         position: relative;
-        left: 0;
+        left: -30px;
         right: 0;
+        transform: scale(.75);
         margin: 0 auto 10px;
     }
     .team-container .container-card{
@@ -413,6 +424,18 @@ footer .container .left-side .contact-us a img:hover{
     #team .slick-list {
         margin: 15px -5px;
     } 
+    #team .container-card .profile {
+        width: 150px;
+        padding: 1rem;
+        margin: auto;
+        justify-content: center;
+    }
+    #team .container-card .card-body{
+        margin-left: 1rem;
+    }
+    #team .container-card .center{
+        text-align: center;
+    }
     .navbar .nav-img{
         width: 250%;
         height: 100%;
