@@ -38,13 +38,13 @@
                         <div class="form-group col-md-6">
                             <label for="inputWa">No. WhatsApp</label>
                             <input type="tel" minlength="11" maxlength="14" name="nowa" placeholder="+62"
-                                class="form-control" id="noWa">
+                                class="form-control" id="noWa" required>
                         </div>
 
                         <div class="form-group col-md-6">
                             <label for="inputTelp">No. Telp</label>
                             <input type="tel" minlength="11" maxlength="14" name="notelp" class="form-control"
-                                placeholder="+62" id="noTelp">
+                                placeholder="+62" id="noTelp" required>
                         </div>
                     </div>
                 </div>
@@ -168,6 +168,7 @@
 
                 <div class="form">
                     <p>Kamu ingin bergabung ke dalam kelas apa?
+                        <span class="clue text-danger">(Kolom yang dicheck hanya nilai default, uncheck jika tidak dipilih)</span>
                         <span class="clue">(Pilih yang sesuai)</span>
                     </p>
                     <div class="form-group row" name="kelas">
@@ -192,7 +193,7 @@
                         <div class="col-sm-10">
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" name="kelass" value="ambisUTBK"
-                                    id="gridCheck3">
+                                    id="gridCheck3" checked>
                                 <label class="form-check-label" for="gridCheck3">
                                     Ambis UTBK
                                 </label>
@@ -209,13 +210,13 @@
                 </div>
 
                 <div class="form">
-                    <p>Yuk pilih ekstra ambis yang ingin kamu ikuti! <span class="clue">(Maks.2)</span></p>
+                    <p>Yuk pilih ekstra ambis yang ingin kamu ikuti! <span class="clue text-danger">(Kolom yang dicheck hanya nilai default, uncheck jika tidak dipilih)</span><span class="clue">(MAX.2)</span></p>
                     <div class="row" name="ekstraAmbis" required>
                         <div class="form-group col-sm-6">
                             <div class="col-sm-10">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="ekstraAmbiss"
-                                        value="Astronomi" id="customCheck1">
+                                        value="Astronomi" id="customCheck1" checked>
                                     <label class="form-check-label" for="customCheck1">
                                         Astronomi
                                     </label>
@@ -306,6 +307,24 @@
                             </div>
                             <div class="col-sm-10">
                                 <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="ekstraAmbiss"
+                                        value="Teknik" id="gridCheck10">
+                                    <label class="form-check-label" for="gridCheck10">
+                                        Teknik
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-sm-10">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="ekstraAmbiss"
+                                        value="Public Speaking" id="gridCheck10">
+                                    <label class="form-check-label" for="gridCheck10">
+                                        Public Speaking
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-sm-10">
+                                <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="ekstraAmbiss" value="Sastra"
                                         id="gridCheck11">
                                     <label class="form-check-label" for="gridCheck11">
@@ -345,7 +364,7 @@
                 <div class="form">
                     <label for="formFileMultiple" class="form-label">Bukti Follow dan Share <span class="clue">(silahkan
                             upload banyak file sekaligus/dijadikan 1 folder)</span></label>
-                    <input class="form-control" type="file" name="FileUpload" id="formFileMultiple" multiple>
+                    <input class="form-control" type="file" name="FileUpload" id="formFileMultiple" required multiple>
                 </div>
 
                 <div class="form">
@@ -353,7 +372,7 @@
                         Member Ambis Camp?</label>
                     <textarea name="ketertarikan" id="text-area" class="form-control input-animation" cols="30" rows="5"
                         required>
-          </textarea>
+                    </textarea>
                 </div>
 
                 <div class="form">
@@ -361,7 +380,7 @@
                         apabila situasi dan kondisi grup tidak sesuai dengan yang diharapkan? Berikan alasan.</label>
                     <textarea name="rekan" id="text-area" class="form-control input-animation" cols="30" rows="5"
                         required>
-          </textarea>
+                    </textarea>
                 </div>
             </section>
 
@@ -387,7 +406,7 @@
             <div class="form">
                 <div class="btn alert alert-dismissible fade show my-alert d-none" role="alert">
                     <strong>Terima kasih!</strong> Data kamu sudah kami terima. Mohon tunggu pemberitahuan lebih lanjut
-                    ya!
+                    melalui Whatsapp ya!
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
                 <button type="submit" value="Upload" class="btn btn-kirim btn-success">Submit
