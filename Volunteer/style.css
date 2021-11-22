@@ -480,14 +480,17 @@ footer .container .left-side .contact-us a img:hover{
         margin: 0 auto;
         padding: 0;
     }
-    #testimoni .testi-container .profile {
-        width: 40%;
+    #testimoni .container-card img.profile {
+        width: 150px;
         padding: 1rem;
-        margin-left: 3rem;
+        margin: auto;
         justify-content: center;
     }
-    #testimoni .testi-container .card-body{
+    #testimoni .container-card .card-body{
         margin-left: 1rem;
+    }
+    #testimoni .container-card .center{
+        text-align: center;
     }
     .register-btn{
         width: 100px;
