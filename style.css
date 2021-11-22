@@ -500,8 +500,7 @@ footer .container .left-side .contact-us a img:hover{
         text-align: center;
     }
     footer .container .left-side .contact-us ul{
-        position: relative;
-        left: -50px;
+        margin-left: -30px;
         white-space: nowrap;
     }
 } 
