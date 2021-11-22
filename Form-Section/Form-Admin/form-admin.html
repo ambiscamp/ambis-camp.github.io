@@ -34,12 +34,12 @@
           <div class="row">
             <div class="form-group col-md-6">
               <label for="inputWa">No. WhatsApp</label>
-              <input type="tel" minlength="11" maxlength="14" placeholder="+62" name="nowa" class="form-control" id="noWa">
+              <input type="tel" minlength="11" maxlength="14" placeholder="+62" name="nowa" class="form-control" id="noWa" required>
             </div>
 
             <div class="form-group col-md-6">
               <label for="inputTelp">No. Telp</label>
-              <input type="tel" minlength="11" maxlength="14" placeholder="+62" name="notelp" class="form-control" id="noTelp">
+              <input type="tel" minlength="11" maxlength="14" placeholder="+62" name="notelp" class="form-control" id="noTelp" required>
             </div>
           </div>
         </div>
@@ -52,7 +52,7 @@
             </div>
             <div class="form-group col-md-6">
               <label for="inputProv">Provinsi</label>
-              <input type="text" name="provinsi" class="form-control" id="inputState">
+              <input type="text" name="provinsi" class="form-control" id="inputState" required>
             </div>
           </div>
         </div>
@@ -89,17 +89,17 @@
           <select name="pendidikan" id="status" class="form-control" required>
             <option value="0" disabled selected value>Pilih pendidikan
             </option>
-            <option value="7" name="status">Kelas 7 SMP/sederajat</option>
-            <option value="8" name="status">Kelas 8 SMP/sederajat</option>
-            <option value="9" name="status">Kelas 9 SMP/sederajat</option>
-            <option value="10" name="status">Kelas 10 SMA/sederajat</option>
-            <option value="11" name="status">Kelas 11 SMA/sederajat</option>
-            <option value="12" name="status">Kelas 12 SMA/sederajat</option>
-            <option value="gap" name="status">Gap year</option>
-            <option value="mhs" name="status">Mahasiswa</option>
-            <option value="fg" name="status">Fresh graduate</option>
-            <option value="guru" name="status">Guru/dosen</option>
-            <option value="umum" name="status">Umum</option>
+            <option value="Kelas 7 SMP/sederajat" name="status">Kelas 7 SMP/sederajat</option>
+            <option value="Kelas 8 SMP/sederajat" name="status">Kelas 8 SMP/sederajat</option>
+            <option value="Kelas 9 SMP/sederajat" name="status">Kelas 9 SMP/sederajat</option>
+            <option value="Kelas 10 SMA/sederajat" name="status">Kelas 10 SMA/sederajat</option>
+            <option value="Kelas 11 SMA/sederajat" name="status">Kelas 11 SMA/sederajat</option>
+            <option value="Kelas 12 SMA/sederajat" name="status">Kelas 12 SMA/sederajat</option>
+            <option value="Gap" name="status">Gap year</option>
+            <option value="Mahasiswa" name="status">Mahasiswa</option>
+            <option value="Fresh graduate" name="status">Fresh graduate</option>
+            <option value="Guru/dosen" name="status">Guru/dosen</option>
+            <option value="Umum" name="status">Umum</option>
           </select>
         </div>
       </section>
@@ -136,105 +136,9 @@
         </div>
 
         <div class="form">
-          <p>Apa jabatan yang kamu pilih? <span class="clue text-danger">(Cukup pilih 1 ya!)</span></p>
-          <div class="row">
+          <p>Apa jabatan yang kamu pilih? <span class="clue text-danger">(Kolom yang dicheck hanya nilai default, uncheck jika tidak dipilih dan CUKUP PILIH 1!)</span></p>
+          <div class="row" required>
             <div class="form-group col-sm-6">
-              <div class="col-sm-10">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" name="jabatan" value="mentormath10" id="customCheck1">
-                  <label class="form-check-label" for="customCheck1">
-                    Mentor Math kelas 10
-                  </label>
-                </div>
-              </div>
-              <div class="col-sm-10">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" name="jabatan" value="mentormath11" id="customCheck2">
-                  <label class="form-check-label" for="customCheck2">
-                    Mentor Math kelas 11
-                  </label>
-                </div>
-              </div>
-              <div class="col-sm-10">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" name="jabatan" value="mentormath12" id="customCheck3">
-                  <label class="form-check-label" for="customCheck3">
-                    Mentor Math kelas 12
-                  </label>
-                </div>
-              </div>
-              <div class="col-sm-10">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" name="jabatan" value="mentorfisika10" id="customCheck4">
-                  <label class="form-check-label" for="customCheck4">
-                    Mentor Fisika kelas 10
-                  </label>
-                </div>
-              </div>
-              <div class="col-sm-10">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" name="jabatan" value="mentorfisika11" id="gridCheck5">
-                  <label class="form-check-label" for="gridCheck5">
-                    Mentor Fisika kelas 11
-                  </label>
-                </div>
-              </div>
-              <div class="col-sm-10">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" name="jabatan" value="mentorfisika12" id="gridCheck6">
-                  <label class="form-check-label" for="gridCheck6">
-                    Mentor Fisika kelas 12
-                  </label>
-                </div>
-              </div>
-              <div class="col-sm-10">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" name="jabatan" value="mentorkimia10" id="gridCheck7">
-                  <label class="form-check-label" for="gridCheck7">
-                    Mentor Kimia kelas 10
-                  </label>
-                </div>
-              </div>
-              <div class="col-sm-10">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" name="jabatan" value="mentorkimia11" id="gridCheck14">
-                  <label class="form-check-label" for="gridCheck14">
-                    Mentor Kimia kelas 11
-                  </label>
-                </div>
-              </div>
-              <div class="col-sm-10">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" name="jabatan" value="mentorkimia12" id="gridCheck15">
-                  <label class="form-check-label" for="gridCheck15">
-                    Mentor Kimia kelas 12
-                  </label>
-                </div>
-              </div>
-              <div class="col-sm-10">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" name="jabatan" value="mentorbio10" id="gridCheck16">
-                  <label class="form-check-label" for="gridCheck16">
-                    Mentor Biologi kelas 10
-                  </label>
-                </div>
-              </div>
-              <div class="col-sm-10">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" name="jabatan" value="mentorbio11" id="gridCheck17">
-                  <label class="form-check-label" for="gridCheck17">
-                    Mentor Biologi kelas 11
-                  </label>
-                </div>
-              </div>
-              <div class="col-sm-10">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" name="jabatan" value="mentorbio12" id="gridCheck18">
-                  <label class="form-check-label" for="gridCheck18">
-                    Mentor Biologi kelas 12
-                  </label>
-                </div>
-              </div>
               <div class="col-sm-10">
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" name="jabatan" value="mentorsosio10" id="gridCheck19">
@@ -347,8 +251,6 @@
                   </label>
                 </div>
               </div>
-            </div>
-            <div class="form-group col-sm-6">
               <div class="col-sm-10">
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" name="jabatan" value="mentor-psikologi" id="gridCheck8">
@@ -405,19 +307,13 @@
                   </label>
                 </div>
               </div>
+            </div>
+            <div class="form-group col-sm-6">
               <div class="col-sm-10">
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" name="jabatan" value="mentor-es-ml" id="gridCheck34">
+                  <input class="form-check-input" type="checkbox" name="jabatan" value="mentor-esport" id="gridCheck34">
                   <label class="form-check-label" for="gridCheck34">
-                    Mentor e-Sport ML
-                  </label>
-                </div>
-              </div>
-              <div class="col-sm-10">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" name="jabatan" value="mentor-es-pubgm" id="gridCheck35">
-                  <label class="form-check-label" for="gridCheck35">
-                    Mentor e-Sport PUBGM
+                    Mentor e-Sport
                   </label>
                 </div>
               </div>
@@ -455,14 +351,6 @@
               </div>
               <div class="col-sm-10">
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" name="jabatan" value="HRD" id="gridCheck40">
-                  <label class="form-check-label" for="gridCheck40">
-                    Human Resource
-                  </label>
-                </div>
-              </div>
-              <div class="col-sm-10">
-                <div class="form-check">
                   <input class="form-check-input" type="checkbox" name="jabatan" value="rekap" id="gridCheck41">
                   <label class="form-check-label" for="gridCheck41">
                     Rekap/Sektretaris
@@ -490,6 +378,22 @@
                   <input class="form-check-input" type="checkbox" name="jabatan" value="graphic-design" id="gridCheck44">
                   <label class="form-check-label" for="gridCheck44">
                     Graphic designer
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-10">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="jabatan" value="Graphic illustrator" id="gridCheck2">
+                  <label class="form-check-label" for="gridCheck2">
+                    Graphic illustrator
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-10">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="jabatan" value="eMagazine designer" id="gridCheck3">
+                  <label class="form-check-label" for="gridCheck3">
+                    eMagazine designer
                   </label>
                 </div>
               </div>
@@ -549,6 +453,14 @@
                   </label>
                 </div>
               </div>
+              <div class="col-sm-10">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="jabatan" value="Tim bahas soal UTBK" id="gridCheck1">
+                  <label class="form-check-label" for="gridCheck1">
+                    Tim bahas soal UTBK
+                  </label>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -602,7 +514,7 @@
 
       <div class="privacy form">
         <h5><b>Catatan Privasi!</b></h5>
-        <p>Dengan menekan tombol 'Submit', kamu menyatakan bahwa data pribadi yang kamu isi benar, dan kamu setuju untuk memberikan data kamu untuk keperluan pendataan peserta Ambis Camp. Data dirimu dijamin hanya untuk keperluan program Ambis Camp saja dan tidak akan digunakan untuk hal lain di luar itu.</p>
+        <p>Dengan menekan tombol 'Submit', kamu menyatakan bahwa data pribadi yang kamu isi benar, dan kamu setuju untuk memberikan data kamu untuk keperluan pendataan peserta Ambis Camp. Data dirimu dijamin hanya untuk keperluan program Ambis Camp saja dan tidak akan digunakan untuk hal lain di luar itu. Note! <span class="clue text-danger">Apabila data yang diisikan tidak sesuai maka pendaftar akan langsung didiskualifikasi.</span></p>
         <div class="form-check">
           <input class="form-check-input" type="checkbox" value="setuju" id="invalidCheck" required  name="setuju">
           <label class="form-check-label" value="setuju" for="invalidCheck">
