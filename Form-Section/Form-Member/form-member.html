@@ -211,12 +211,12 @@
 
                 <div class="form">
                     <p>Yuk pilih ekstra ambis yang ingin kamu ikuti! <span class="clue text-danger">(Kolom yang dicheck hanya nilai default, uncheck jika tidak dipilih)</span><span class="clue">(MAX.2)</span></p>
-                    <div class="row" name="ekstraAmbis" required>
-                        <div class="form-group col-sm-6">
+                    <div class="row ekstra" name="ekstraAmbis" required>
+                        <div class="form-group col-sm-6 ">
                             <div class="col-sm-10">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="ekstraAmbiss"
-                                        value="Astronomi" id="customCheck1" checked>
+                                        onclick="checkControl(1)" value="Astronomi" id="customCheck1" checked>
                                     <label class="form-check-label" for="customCheck1">
                                         Astronomi
                                     </label>
@@ -225,7 +225,7 @@
                             <div class="col-sm-10">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="ekstraAmbiss"
-                                        value="Kesehatan" id="customCheck2">
+                                        onclick="checkControl(2)" value="Kesehatan" id="customCheck2">
                                     <label class="form-check-label" for="customCheck2">
                                         Kesehatan
                                     </label>
@@ -234,7 +234,7 @@
                             <div class="col-sm-10">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="ekstraAmbiss"
-                                        value="Informatika" id="customCheck3">
+                                        onclick="checkControl(3)" value="Informatika" id="customCheck3">
                                     <label class="form-check-label" for="customCheck3">
                                         Informatika
                                     </label>
@@ -243,7 +243,7 @@
                             <div class="col-sm-10">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="ekstraAmbiss"
-                                        value="Psikologi" id="customCheck4">
+                                        onclick="checkControl(4)" value="Psikologi" id="customCheck4">
                                     <label class="form-check-label" for="customCheck4">
                                         Psikologi
                                     </label>
@@ -251,7 +251,7 @@
                             </div>
                             <div class="col-sm-10">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="ekstraAmbiss" value="Filsafat"
+                                    <input class="form-check-input" type="checkbox" name="ekstraAmbiss" onclick="checkControl(5)" value="Filsafat"
                                         id="gridCheck5">
                                     <label class="form-check-label" for="gridCheck5">
                                         Filsafat
@@ -260,7 +260,7 @@
                             </div>
                             <div class="col-sm-10">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="ekstraAmbiss" value="Hukum"
+                                    <input class="form-check-input" type="checkbox" name="ekstraAmbiss" onclick="checkControl(6)" value="Hukum"
                                         id="gridCheck6">
                                     <label class="form-check-label" for="gridCheck6">
                                         Hukum
@@ -269,7 +269,7 @@
                             </div>
                             <div class="col-sm-10">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="ekstraAmbiss" value="Bahasa"
+                                    <input class="form-check-input" type="checkbox" name="ekstraAmbiss" onclick="checkControl(7)" value="Bahasa"
                                         id="gridCheck7">
                                     <label class="form-check-label" for="gridCheck7">
                                         Bahasa
@@ -280,7 +280,7 @@
                         <div class="form-group col-sm-6">
                             <div class="col-sm-10">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="ekstraAmbiss" value="e-Sport"
+                                    <input class="form-check-input" type="checkbox" name="ekstraAmbiss" onclick="checkControl(8)" value="e-Sport"
                                         id="gridCheck8">
                                     <label class="form-check-label" for="gridCheck8">
                                         e-Sport
@@ -290,7 +290,7 @@
                             <div class="col-sm-10">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="ekstraAmbiss"
-                                        value="Desain Digital" id="gridCheck9">
+                                        onclick="checkControl(9)" value="Desain Digital" id="gridCheck9">
                                     <label class="form-check-label" for="gridCheck9">
                                         Desain Digital
                                     </label>
@@ -299,7 +299,7 @@
                             <div class="col-sm-10">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="ekstraAmbiss"
-                                        value="Pendidikan" id="gridCheck10">
+                                        onclick="checkControl(10)" value="Pendidikan" id="gridCheck10">
                                     <label class="form-check-label" for="gridCheck10">
                                         Pendidikan
                                     </label>
@@ -308,8 +308,8 @@
                             <div class="col-sm-10">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="ekstraAmbiss"
-                                        value="Teknik" id="gridCheck10">
-                                    <label class="form-check-label" for="gridCheck10">
+                                        onclick="checkControl(11)" value="Teknik" id="gridCheck11">
+                                    <label class="form-check-label" for="gridCheck11">
                                         Teknik
                                     </label>
                                 </div>
@@ -317,17 +317,17 @@
                             <div class="col-sm-10">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="ekstraAmbiss"
-                                        value="Public Speaking" id="gridCheck10">
-                                    <label class="form-check-label" for="gridCheck10">
+                                        onclick="checkControl(12)" value="Public Speaking" id="gridCheck12">
+                                    <label class="form-check-label" for="gridCheck12">
                                         Public Speaking
                                     </label>
                                 </div>
                             </div>
                             <div class="col-sm-10">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="ekstraAmbiss" value="Sastra"
-                                        id="gridCheck11">
-                                    <label class="form-check-label" for="gridCheck11">
+                                    <input class="form-check-input" type="checkbox" name="ekstraAmbiss" onclick="checkControl(13)" value="Sastra"
+                                        id="gridCheck14">
+                                    <label class="form-check-label" for="gridCheck14">
                                         Sastra dan kepenulisan
                                     </label>
                                 </div>
@@ -335,15 +335,15 @@
                             <div class="col-sm-10">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="ekstraAmbiss"
-                                        value="SeniMusik" id="gridCheck12">
-                                    <label class="form-check-label" for="gridCheck12">
+                                        onclick="checkControl(14)" value="SeniMusik" id="gridCheck15">
+                                    <label class="form-check-label" for="gridCheck15">
                                         Seni musik
                                     </label>
                                 </div>
                             </div>
                             <div class="col-sm-10">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="ekstraAmbiss" value="SeniRupa"
+                                    <input class="form-check-input" type="checkbox" name="ekstraAmbiss" onclick="checkControl(15)" value="SeniRupa"
                                         id="gridCheck13">
                                     <label class="form-check-label" for="gridCheck13">
                                         Seni rupa
@@ -425,10 +425,25 @@
 
 
 
-
     <!-- JS  Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <script>
+        function checkControl(j) {
+            total = 1
+            let check = document.member.ekstraAmbiss
+            for (let i = 0; i < check.length; i++) {
+                if (check[i].checked) {
+                    total+=1
+                }
+            }
+            if (total > 3) {
+                alert("Eitss, maksimum piihan hanya 2 :)")
+                check[j-1].checked = false
+            }    
+            return false;
+        }
     </script>
     <!-- form js -->
     <script>
