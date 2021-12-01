@@ -70,10 +70,14 @@ nav.nav-transparent a, nav.hide-nav a{
 .navbar .navbar-nav .nav-item .nav-link {
     color: #00438b;
     transition: 0.2s;
+    padding: 0.5rem .8rem;
     border-bottom: 2px solid transparent;
 }
 .navbar .navbar-nav .nav-item .nav-link:hover {
-    border-bottom: 2px solid #00438b;
+    background-color: #c2dfff;
+    border-radius: 999px;
+    padding: 0.5rem .8rem;
+    transition: 0.3s;
 }
 section{
     padding-top: 5rem;
