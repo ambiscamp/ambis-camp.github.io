@@ -112,7 +112,7 @@
             </section>
 
             <section class="add-quest">
-                <h4 class="form"><b>Pertanyaan tambahan</b></h4>
+                <h4 class="form"><b>Pertanyaan wawancara</b></h4>
                 <div class="form">
                     <p>Apakah kamu yakin ingin menjadi Member Ambis Camp?</p>
                     <div class="col-sm-10">
