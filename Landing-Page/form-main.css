@@ -110,6 +110,9 @@ footer a{
 
 /* responsive */
 @media screen and (min-width: 320px) and (max-width: 384px) {
+    body{
+        overflow-x: hidden;
+    }
     form{
         width: 60%;
     }
@@ -123,17 +126,19 @@ footer a{
     }
 } 
 @media screen and (min-width: 384px) and (max-width:666px) {
+    body{
+        overflow-x: hidden;
+    }
     form{
         width: 70%;
     }
 }
 @media screen and (min-width: 667px) and (max-width:990px) {
+    body{
+        overflow-x: hidden;
+    }
     form .btn{
         transform: scale(0.7);
         margin-left: -40px;
     }
-}
-@media screen and (min-width: 991px) and (max-width:98%) {
-}
-@media screen and (max-width:999px) {
 }
